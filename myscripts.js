@@ -1,8 +1,14 @@
 let animationSkip = false;
 
-
+const span = document.getElementsByClassName("close")[0];
+var modal = document.getElementById("myModal");
+var img = document.getElementById("myImg");
 let mainText = document.querySelector("#mainText");
 let horizonText = document.querySelector("#horizonBody");
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 const lines = [
   document.querySelector("#text1"),
   document.querySelector("#text2"),
@@ -16,12 +22,6 @@ const lines = [
   document.querySelector("#text10"),
   document.querySelector("#text11"),
 ];
-
-// Boostrap
-const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
-const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
 // Show/Hide Horizon and Main
 function showMinecraft() {
@@ -42,14 +42,10 @@ document.getElementById("closeHorizon").onclick = function () {
 };
 
 // Modals
-var modal = document.getElementById("myModal");
-var img = document.getElementById("myImg");
 
 img.onclick = function () {
   modal.style.display = "block";
 }
-var span = document.getElementsByClassName("close")[0];
-
 span.onclick = function () {
   modal.style.display = "none";
 }
@@ -70,6 +66,7 @@ function startTerminal(timeout) {
     }, timeout);
 }
 
+// Print text [Made by Anton]
 function slowPrint(text, time, startIndex = 0, line, timeout) {
   setTimeout(() => {
     if (animationSkip) {
@@ -79,7 +76,7 @@ function slowPrint(text, time, startIndex = 0, line, timeout) {
     const interval = setInterval(() => {
       if (index < text.length) {
         const substring = text.substring(0, index + 1);
-        lines[line].innerHTML = substring;
+        lines[line].innerText = substring;
         index++;
       } else {
         clearInterval(interval);
@@ -87,7 +84,8 @@ function slowPrint(text, time, startIndex = 0, line, timeout) {
     }, time)
   }, timeout);
 }
-// session shit
+
+// Save Session
 function init() {
   if (sessionStorage.getItem("didPlay") != null) {
     startTerminal(0);
@@ -126,4 +124,10 @@ function typeTerminal() {
   slowPrint('..2', 40, 0, 8, 13000);
   slowPrint('.1', 40, 0, 9, 14000);
   slowPrint('[Program Active]', 100, 0, 10, 15000)
+}
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 }

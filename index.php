@@ -28,10 +28,10 @@
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 </head>
 
-<body onload="
-init()">
+<body id="#body" onload="init()">
   <div id="terminal">
-    <div onclick="startTerminal(0); animatedTextStart(300); animationSkip = true" id="skip">Skip Intro</div>
+    <div onclick="startTerminal(0); animatedTextStart(300); enableScroll(); animationSkip = true" id="skip">Skip Intro
+    </div>
     <div class="terminalText" id="text1"></div>
     <div class="terminalText" id="text2"></div>
     <div class="terminalText" id="text3"></div>
@@ -67,7 +67,7 @@ init()">
     <div class="row">
       <div id="mainText" class="col-16 position-absolute">
         <div class="title-container programActive">
-          <h2 id="mainTitle" class="animatedText fade-transition">Program Active</h2>
+          <h1 id="mainTitle" class="animatedText fade-transition">Program Active</h1>
         </div>
         <div id="description">
           <div class="row-1">
@@ -109,13 +109,13 @@ init()">
   </div>
   <div id="projectBody" class="">
     <div id="projectsTitleText">
-      <h3>
+      <h1>
         Projects
-      </h3>
+      </h1>
     </div>
     <div id="description">These are some of the upcoming or ongoing projects i am working on.</div>
     <div class="projects">
-      <div id="horizonLimits" onclick="showMinecraft()">
+      <div id="horizonLimits" onclick="showMinecraft(); scrollToTop()">
         <h3 class="unselectable">Horizon Limits</h3>
       </div>
       <div id="project2" class="unknownProject">
