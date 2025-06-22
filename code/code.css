@@ -1,0 +1,95 @@
+body {
+    background-image: url(../wallpaper.jpg);
+    background-size: 100%;
+    background-repeat: repeat-y;
+    background-position: center;
+    margin: 10px;
+}
+
+#buttons {
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    color: rgb(206, 206, 206);
+    background-color: dimgrey;
+    max-width: 400px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: auto;
+}
+
+.button1,
+.button2,
+.button3 {
+    transform: scale(1.5);
+    width: 65px;
+    border: none;
+    border-radius: 10px;
+    display: inline;
+    margin-left: 25px;
+    margin-right: 25px;
+    transition: 0.3s;
+}
+
+.button1 {
+    cursor: pointer;
+    background-color: grey;
+    border: none;
+    opacity: 0.6;
+}
+
+.button2 {
+    border-style: none;
+    background-color: rgb(22, 22, 22);
+    color: rgb(206, 206, 206);
+}
+
+.button1:hover,
+.button3:hover {
+    opacity: 1;
+    background-color: rgb(22, 22, 22);
+    color: white;
+}
+
+.button3 {
+    cursor: pointer;
+    background-color: grey;
+    border: none;
+    opacity: 0.6;
+}
+
+#main {
+    position: relative;
+    transition: ease;
+    background-color: rgb(22, 22, 22);
+    border-style: initial;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 10px;
+    padding: 5px;
+    max-width: 1500px;
+    max-height: 700px;
+}
+
+#mainTitle {
+    color: rgb(206, 206, 206);
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    max-width: 300px;
+    transform: scale(1.7);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+#description {
+    color: rgb(206, 206, 206);
+    text-align: center;
+}
+.codeBlock {
+    text-align: center;
+    color:rgb(206, 206, 206);
+    background-color: rgb(43, 42, 42);
+    max-width: 80%;
+}
