@@ -103,13 +103,7 @@ body {
     transition: 0.3s;
     opacity: 0.4;
     font-size: 25px;
-        flex-wrap: wrap;
-}
-@media screen and (max-width: 600px) {
-.projects{
     flex-wrap: wrap;
-    overflow: scroll
-}
 }
 
 #horizonLimits:hover,
@@ -195,6 +189,15 @@ body {
     from {
         width: 0
     }
+}
+@media screen and (max-width: 600px) {
+    #mainTitle {
+        margin-top: 120px;
+    }
+.projects{
+    flex-wrap: wrap;
+    overflow: scroll
+}
 }
 
 #closeHorizon {

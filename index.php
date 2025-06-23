@@ -30,7 +30,7 @@
 
 <body id="#body" onload="init()">
   <div id="terminal">
-    <div onclick="startTerminal(0); animatedTextStart(300); enableScroll(); animationSkip = true" id="skip">Skip Intro
+    <div onclick="startTerminal(0); animatedTextStart(300); animationSkip = true" id="skip">Skip Intro
     </div>
     <div class="terminalText" id="text1"></div>
     <div class="terminalText" id="text2"></div>
