@@ -60,6 +60,9 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
 }
+#horizonTitle {
+        margin-top: 0px;
+}
 
 #description {
     color: rgb(206, 206, 206);
@@ -80,7 +83,7 @@ body {
 .projects {
     color: rgb(206, 206, 206);
     display: flex;
-    padding: 20px
+    padding: 20px;
 }
 
 #horizonLimits,
@@ -93,12 +96,20 @@ body {
     display: inline-block;
     margin: auto;
     width: 200px;
-    max-width: 250px;
+    max-width: 400px;
+    min-width: 100px;
     height: 200px;
     padding: 120px 0;
     transition: 0.3s;
     opacity: 0.4;
     font-size: 25px;
+        flex-wrap: wrap;
+}
+@media screen and (max-width: 600px) {
+.projects{
+    flex-wrap: wrap;
+    overflow: scroll
+}
 }
 
 #horizonLimits:hover,
@@ -187,9 +198,9 @@ body {
 }
 
 #closeHorizon {
-    position: absolute;
-    top: 50px;
-    left: 35px;
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 0px;
     color: #f1f1f1;
     font-size: 40px;
     font-weight: bold;
